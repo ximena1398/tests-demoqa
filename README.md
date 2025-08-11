@@ -1,11 +1,9 @@
-# 🧪 Tests - Site Demo QA
+### 🧪 Tests - Site Demo QA
 
-## 📌 Comandos de ejecución
+#### 📌 Comandos de ejecución
 
-### 🔹 Todo el proyecto
-```bash
+##### 🔹 Todo el proyecto
 ./gradlew clean test
 
-### 🔹 Por Feature (Runner específico)
-```bash
+##### 🔹 Por Feature (Runner específico)
 ./gradlew test --tests "co.com.screenplay.project.runners.OpenWebTest"
