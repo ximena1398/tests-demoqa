@@ -13,4 +13,8 @@ public class HomeUI extends PageObject {
             .locatedBy("//div[@class='element-list collapse show']//li[@id='item-{0}']");
     public static final Target TEXT_RANDOM_NAME_BTN = Target.the("Texto random del nombre de los botones")
             .locatedBy("//h1[@class='text-center']");
+    public static final Target CARD_FORMS = Target.the("Tarjeta formulario")
+            .locatedBy("//div[contains (@class, 'category-cards')]//h5[contains (text(), 'Forms')]");
+    public static final Target BTN_PRACTICE_FORM = Target.the("Botón formulario lista de elementos")
+            .locatedBy("//li[@id='item-0']//span[text()='Practice Form']");
 }

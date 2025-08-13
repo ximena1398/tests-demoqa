@@ -18,7 +18,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 @Slf4j
-public class OpenWebStepDefinitions {
+public class OpenWebStepDefinition {
 
     @Before
     public void setTheStage() {
