@@ -15,13 +15,22 @@ public class PracticeFormPageUI extends PageObject {
             .located(By.id("userEmail"));
 
     public static final Target RADIO_MALE = Target.the("opción género masculino")
-            .located(By.id("gender-radio-1"));
+            .located(By.cssSelector("label[for='gender-radio-1']"));
 
     public static final Target RADIO_FEMALE = Target.the("opción género femenino")
-            .located(By.id("gender-radio-2"));
+            .located(By.cssSelector("label[for='gender-radio-2']"));
 
     public static final Target RADIO_OTHER = Target.the("opción género otro")
-            .located(By.id("gender-radio-3"));
+            .located(By.cssSelector("label[for='gender-radio-3']"));
+
+    public static Target gender(String gender) {
+        switch (gender.toLowerCase()) {
+            case "male": return RADIO_MALE;
+            case "female": return RADIO_FEMALE;
+            case "other": return RADIO_OTHER;
+            default: throw new IllegalArgumentException("Género no válido: " + gender);
+        }
+    }
 
     public static final Target NUMBER_LABEL = Target.the("campo número")
             .located(By.id("userNumber"));
@@ -29,8 +38,8 @@ public class PracticeFormPageUI extends PageObject {
     public static final Target DATE_OF_BIRTH_DATEPICKER = Target.the("selección fecha de nacimiento")
             .located(By.id("dateOfBirthInput"));
 
-    public static final Target ASUNTO_LABEL = Target.the("campo asunto")
-            .located(By.id("subjectsContainer"));
+    public static final Target SUBJECT_LABEL = Target.the("campo asignatura")
+            .located(By.id("subjectsInput"));
 
     public static final Target CHECKBOX_HOBBIE_DEPORTES = Target.the("opción deportes")
             .located(By.id("hobbies-checkbox-1"));
