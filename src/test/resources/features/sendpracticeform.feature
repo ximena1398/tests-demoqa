@@ -13,5 +13,4 @@ Feature: Envío de formulario de prueba
   Scenario: Envío exitoso de formulario con datos válidos
     And accede a la sección de formulario
     When Completa el formulario con datos válidos
-    And Lo envía
     Then Debería ver un mensaje de confirmación

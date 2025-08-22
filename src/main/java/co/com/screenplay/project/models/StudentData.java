@@ -1,5 +1,9 @@
 package co.com.screenplay.project.models;
 
+import net.serenitybdd.screenplay.targets.Target;
+
+import java.util.List;
+
 public class StudentData {
     private String firstName;
     private String lastName;
@@ -8,7 +12,7 @@ public class StudentData {
     private String mobile;
     private String dateOfBirth;
     private String subjects;
-    private String hobby;
+    private List<Target> hobby;
     private String picturePath;
     private String address;
     private String state;
@@ -16,7 +20,7 @@ public class StudentData {
 
 
     public StudentData(String firstName, String lastName, String email, String gender, String mobile, String dateOfBirth,
-                       String subjects, String hobby, String picturePath, String address, String state, String city) {
+                       String subjects, List<Target> hobby, String picturePath, String address, String state, String city) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -59,7 +63,7 @@ public class StudentData {
         return subjects;
     }
 
-    public String getHobby() {
+    public List<Target> getHobby() {
         return hobby;
     }
 

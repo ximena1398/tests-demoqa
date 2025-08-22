@@ -42,13 +42,13 @@ public class PracticeFormPageUI extends PageObject {
             .located(By.id("subjectsInput"));
 
     public static final Target CHECKBOX_HOBBIE_DEPORTES = Target.the("opción deportes")
-            .located(By.id("hobbies-checkbox-1"));
+            .located(By.cssSelector("label[for='hobbies-checkbox-1']"));
 
     public static final Target CHECKBOX_HOBBIE_READING = Target.the("opción lectura")
-            .located(By.id("hobbies-checkbox-2"));
+            .located(By.cssSelector("label[for='hobbies-checkbox-2']"));
 
     public static final Target CHECKBOX_HOBBIE_MUSIC = Target.the("opción música")
-            .located(By.id("hobbies-checkbox-3"));
+            .located(By.cssSelector("label[for='hobbies-checkbox-3']"));
 
     public static final Target UPLOAD_PICTURE_BUTTON = Target.the("botón cargar foto")
             .located(By.id("uploadPicture"));
@@ -59,16 +59,20 @@ public class PracticeFormPageUI extends PageObject {
     public static final Target STATE_DROPDOWN = Target.the("desplegable de estado")
             .located(By.id("state"));
 
+    public static final Target STATE_INPUT = Target.the("campo de búsqueda de estado")
+            .located(By.id("react-select-3-input"));
+
     public static final Target CITY_DROPDOWN = Target.the("desplegable de ciudad")
             .located(By.id("city"));
+
+    public static final Target CITY_INPUT = Target.the("campo de búsqueda de estado")
+            .located(By.id("react-select-4-input"));
 
     public static final Target BUTTON_SUBMIT = Target.the("botón enviar formulario")
             .located(By.id("submit"));
 
-    //TARGET DINÁMICO
-    public static Target VALUE_IN_MODAL(String label) {
-        return Target.the("valor de " + label + " en el modal")
-                .located(By.xpath("//td[text()='" + label + "']/following-sibling::td"));
-    }
+    public static final Target MODAL_VALUES = Target.the("values from modal table")
+            .locatedBy("//table[@class='table table-dark table-striped table-bordered table-hover']//tbody//tr/td[2]");
+
 
 }
