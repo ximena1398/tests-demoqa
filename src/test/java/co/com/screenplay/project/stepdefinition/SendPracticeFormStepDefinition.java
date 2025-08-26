@@ -61,7 +61,12 @@ public class SendPracticeFormStepDefinition {
     @Then("Debería ver un mensaje de confirmación")
     public void shouldSeeAConfirmationMessage() {
         StudentData rememberedData = theActorInTheSpotlight().recall("studentData");
-
+        //theActorInTheSpotlight(): obtiene el actor que está ejecutando la prueba.
+        //should(...): indica que se va a hacer una verificación.
+        //seeThat(...): ejecuta la Question (ValidateInfoForm) para obtener un resultado.
+        //is(true): compara el resultado con true.
+        //Si ValidateInfoForm devuelve true, la prueba pasa.
+        //Si devuelve false, lanza la excepción que viste antes.
         theActorInTheSpotlight().should(
                 seeThat(
                         ValidateInfoForm.withParams(rememberedData),

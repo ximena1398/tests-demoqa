@@ -28,7 +28,10 @@ public class ValidateInfoForm implements Question<Boolean> {
         boolean nameMatch = TableFormUtils.getValueFromTable(rows, "Student Name")
                 .equals(data.getFirstName() + " " + data.getLastName());
 
-        return nameMatch;
+        boolean emailMatch = TableFormUtils.getValueFromTable(rows, "Student Email")
+                .equals(data.getEmail());
+
+        return nameMatch && emailMatch;
     }
 
     public static ValidateInfoForm withParams(StudentData data) {

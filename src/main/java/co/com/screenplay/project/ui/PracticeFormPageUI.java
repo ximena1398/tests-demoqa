@@ -72,7 +72,7 @@ public class PracticeFormPageUI extends PageObject {
             .located(By.id("submit"));
 
     public static final Target MODAL_VALUES = Target.the("values from modal table")
-            .locatedBy("//table[@class='table table-dark table-striped table-bordered table-hover']//tbody//tr/td[2]");
+            .locatedBy("//table[@class='table table-dark table-striped table-bordered table-hover']//tbody//tr");
 
 
 }
