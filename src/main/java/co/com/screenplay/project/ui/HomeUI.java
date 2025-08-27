@@ -17,4 +17,8 @@ public class HomeUI extends PageObject {
             .locatedBy("//div[contains (@class, 'category-cards')]//h5[contains (text(), 'Forms')]");
     public static final Target BTN_PRACTICE_FORM = Target.the("Botón formulario lista de elementos")
             .locatedBy("//li[@id='item-0']//span[text()='Practice Form']");
+    public static final Target BTN_WIDGETS = Target.the("Botón acceso Widgets")
+            .locatedBy("//div[contains (@class, 'category-cards')]//h5[contains (text(), 'Widgets')]");
+    public static final Target BTN_LIST_PROGRESS_BAR = Target.the("Elemento Widgets en la lista")
+            .locatedBy("//div[@class='element-list collapse show']//li[5]");
 }

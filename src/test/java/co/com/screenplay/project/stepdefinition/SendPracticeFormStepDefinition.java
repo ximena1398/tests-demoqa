@@ -17,7 +17,6 @@ import net.serenitybdd.screenplay.targets.Target;
 import java.util.Arrays;
 import java.util.List;
 
-import static co.com.screenplay.project.utils.Constans.ACTOR;
 import static org.hamcrest.CoreMatchers.is;  // <-- CORRECCIÓN AQUÍ
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -28,7 +27,6 @@ public class SendPracticeFormStepDefinition {
     @Before
     public void setTheStage() {
         OnStage.setTheStage(new OnlineCast());
-        OnStage.theActorCalled(ACTOR);
     }
 
     @And("accede a la sección de formulario")

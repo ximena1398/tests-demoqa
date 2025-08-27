@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static co.com.screenplay.project.ui.HomeUI.*;
 import static co.com.screenplay.project.utils.Constans.TIME_SHORT;
