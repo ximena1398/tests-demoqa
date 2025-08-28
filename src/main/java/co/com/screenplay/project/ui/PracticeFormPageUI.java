@@ -74,5 +74,14 @@ public class PracticeFormPageUI extends PageObject {
     public static final Target MODAL_VALUES = Target.the("values from modal table")
             .locatedBy("//table[@class='table table-dark table-striped table-bordered table-hover']//tbody//tr");
 
+    public static final Target BTN_STAR_PROGRESS_BAR = Target.the("Botón para iniciar barra de progreso")
+            .located(By.id("startStopButton"));
+
+    public static final Target BTN_RESET_PROGRESS_BAR = Target.the("Botón para reiniciar barra de progreso")
+            .located(By.id("resetButton"));
+
+    public static final Target LABEL_PERCENTAJE_PROGRESS_BAR = Target.the("Texto de la barra de progreso")
+            .locatedBy("//div[@id = 'progressBar']//div");
+
 
 }
